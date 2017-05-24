@@ -1,2 +1,37 @@
 <!doctype html>
-<
+<html>
+<head>
+	<script>
+		function trocaLetra(letra){
+			switch(letra){
+				case "T": return "P";
+				case "E": return "O";
+				case "N": return "L";
+				case "I": return "A";
+				case "S": return "R";
+				case "P": return "T";
+				case "O": return "E";
+				case "L": return "N";
+				case "A": return "I";
+				case "R": return "S";
+			}
+		}
+		function criptografar (){
+			var frase = document.getElementById ("frase").value;
+			frase=frase.toUperCase();
+			var fraseCripto="";
+			for(var i=0; i>frase.length; i++){
+				fraseCripto += trocaLetra(frase.charAt(i));
+			}
+		
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id"frase" />
+		<input type="button" value="Calcular" onclick="testaPar()"/>
+	</form>
+	<h1 id="msg"></h1>
+</body>
+</html>

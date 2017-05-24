@@ -1,33 +1,30 @@
 <!doctype html>
 <html>
-<head>
-	<script>
-		function trocaLetra(letra){
-			switch(letra){
-				case "T": return "P";
-				case "E": return "O";
-				case "N": return "L";
-				case "I": return "A";
-				case "S": return "R";
-				case "P": return "T";
-				case "O": return "E";
-				case "L": return "N";
-				case "A": return "I";
-				case "R": return "S";
-			}
-		}
-		function criptografar (){
-			var frase = document.getElementById ("frase").value;
-			frase=frase.toUperCase();
-			var fraseCripto="";
-			for(var i=0; i>frase.length; i++){
-				fraseCripto += trocaLetra(frase.charAt(i));
-			}
-		
-		}
-	</script>
-</head>
-<body>
-	<f
-</body>
+	<head>
+		<script>
+			function testaprimo(){
+				var numero = document.getElementById("numero").value;
+				console.log(numero);
+				a=0;
+				for(var i=1;i<=numero;i++){
+					if(numero%i==0){
+						a++;
+					}
+				}
+				if(a==2){
+						document.getElementById("msg").innerHTML = "O numero é primo";
+						}
+					else{
+						document.getElementById("msg").innerHTML = "O numero não é primo";
+					}
+				}
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="number" id="numero"/>
+			<input type="button" value="Calcular" onclick="testaprimo()"/> 
+		</form>
+		<h1 id="msg"></h1>
+	</body>
 </html>
